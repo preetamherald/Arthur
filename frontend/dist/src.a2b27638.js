@@ -25760,98 +25760,133 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Sidepanel = function Sidepanel(props) {
-  return _react.default.createElement("div", {
-    id: "sidepanel"
-  }, _react.default.createElement("div", {
-    id: "profile"
-  }, _react.default.createElement("div", {
-    className: "wrap"
-  }, _react.default.createElement("img", {
-    id: "profile-img",
-    src: "http://emilcarlsson.se/assets/mikeross.png",
-    className: "online",
-    alt: ""
-  }), _react.default.createElement("p", null, "Mike Ross"), _react.default.createElement("i", {
-    className: "fa fa-chevron-down expand-button",
-    "aria-hidden": "true"
-  }), _react.default.createElement("div", {
-    id: "status-options"
-  }, _react.default.createElement("ul", null, _react.default.createElement("li", {
-    id: "status-online",
-    className: "active"
-  }, _react.default.createElement("span", {
-    className: "status-circle"
-  }), " ", _react.default.createElement("p", null, "Online")), _react.default.createElement("li", {
-    id: "status-away"
-  }, _react.default.createElement("span", {
-    className: "status-circle"
-  }), " ", _react.default.createElement("p", null, "Away")), _react.default.createElement("li", {
-    id: "status-busy"
-  }, _react.default.createElement("span", {
-    className: "status-circle"
-  }), " ", _react.default.createElement("p", null, "Busy")), _react.default.createElement("li", {
-    id: "status-offline"
-  }, _react.default.createElement("span", {
-    className: "status-circle"
-  }), " ", _react.default.createElement("p", null, "Offline")))), _react.default.createElement("div", {
-    id: "expanded"
-  }))), _react.default.createElement("div", {
-    id: "search"
-  }, _react.default.createElement("label", {
-    htmlFor: ""
-  }, _react.default.createElement("i", {
-    className: "fa fa-search",
-    "aria-hidden": "true"
-  })), _react.default.createElement("input", {
-    type: "text",
-    placeholder: "Search contacts..."
-  })), _react.default.createElement("div", {
-    id: "contacts"
-  }, _react.default.createElement("ul", null, _react.default.createElement("li", {
-    className: "contact"
-  }, _react.default.createElement("div", {
-    className: "wrap"
-  }, _react.default.createElement("span", {
-    className: "contact-status online"
-  }), _react.default.createElement("img", {
-    src: "http://emilcarlsson.se/assets/louislitt.png",
-    alt: ""
-  }), _react.default.createElement("div", {
-    className: "meta"
-  }, _react.default.createElement("p", {
-    className: "name"
-  }, "Louis Litt"), _react.default.createElement("p", {
-    className: "preview"
-  }, "You just got LITT up, Mike.")))), _react.default.createElement("li", {
-    className: "contact active"
-  }, _react.default.createElement("div", {
-    className: "wrap"
-  }, _react.default.createElement("span", {
-    className: "contact-status busy"
-  }), _react.default.createElement("img", {
-    src: "http://emilcarlsson.se/assets/harveyspecter.png",
-    alt: ""
-  }), _react.default.createElement("div", {
-    className: "meta"
-  }, _react.default.createElement("p", {
-    className: "name"
-  }, "Harvey Specter"), _react.default.createElement("p", {
-    className: "preview"
-  }, "Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and htmlForty six other things.")))))), _react.default.createElement("div", {
-    id: "bottom-bar"
-  }, _react.default.createElement("button", {
-    id: "addcontact"
-  }, _react.default.createElement("i", {
-    className: "fa fa-user-plus fa-fw",
-    "aria-hidden": "true"
-  }), " ", _react.default.createElement("span", null, "Add contact")), _react.default.createElement("button", {
-    id: "settings"
-  }, _react.default.createElement("i", {
-    className: "fa fa-cog fa-fw",
-    "aria-hidden": "true"
-  }), " ", _react.default.createElement("span", null, "Settings"))));
-};
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var Sidepanel =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Sidepanel, _React$Component);
+
+  function Sidepanel() {
+    _classCallCheck(this, Sidepanel);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Sidepanel).apply(this, arguments));
+  }
+
+  _createClass(Sidepanel, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        id: "sidepanel"
+      }, _react.default.createElement("div", {
+        id: "profile"
+      }, _react.default.createElement("div", {
+        className: "wrap"
+      }, _react.default.createElement("img", {
+        id: "profile-img",
+        src: "http://emilcarlsson.se/assets/mikeross.png",
+        className: "online",
+        alt: ""
+      }), _react.default.createElement("p", null, "Mike Ross"), _react.default.createElement("i", {
+        className: "fa fa-chevron-down expand-button",
+        "aria-hidden": "true"
+      }), _react.default.createElement("div", {
+        id: "status-options"
+      }, _react.default.createElement("ul", null, _react.default.createElement("li", {
+        id: "status-online",
+        className: "active"
+      }, _react.default.createElement("span", {
+        className: "status-circle"
+      }), " ", _react.default.createElement("p", null, "Online")), _react.default.createElement("li", {
+        id: "status-away"
+      }, _react.default.createElement("span", {
+        className: "status-circle"
+      }), " ", _react.default.createElement("p", null, "Away")), _react.default.createElement("li", {
+        id: "status-busy"
+      }, _react.default.createElement("span", {
+        className: "status-circle"
+      }), " ", _react.default.createElement("p", null, "Busy")), _react.default.createElement("li", {
+        id: "status-offline"
+      }, _react.default.createElement("span", {
+        className: "status-circle"
+      }), " ", _react.default.createElement("p", null, "Offline")))), _react.default.createElement("div", {
+        id: "expanded"
+      }))), _react.default.createElement("div", {
+        id: "search"
+      }, _react.default.createElement("label", {
+        htmlFor: ""
+      }, _react.default.createElement("i", {
+        className: "fa fa-search",
+        "aria-hidden": "true"
+      })), _react.default.createElement("input", {
+        type: "text",
+        placeholder: "Search contacts..."
+      })), _react.default.createElement("div", {
+        id: "contacts"
+      }, _react.default.createElement("ul", null, _react.default.createElement("li", {
+        className: "contact"
+      }, _react.default.createElement("div", {
+        className: "wrap"
+      }, _react.default.createElement("span", {
+        className: "contact-status online"
+      }), _react.default.createElement("img", {
+        src: "http://emilcarlsson.se/assets/louislitt.png",
+        alt: ""
+      }), _react.default.createElement("div", {
+        className: "meta"
+      }, _react.default.createElement("p", {
+        className: "name"
+      }, "Louis Litt"), _react.default.createElement("p", {
+        className: "preview"
+      }, "You just got LITT up, Mike.")))), _react.default.createElement("li", {
+        className: "contact active"
+      }, _react.default.createElement("div", {
+        className: "wrap"
+      }, _react.default.createElement("span", {
+        className: "contact-status busy"
+      }), _react.default.createElement("img", {
+        src: "http://emilcarlsson.se/assets/harveyspecter.png",
+        alt: ""
+      }), _react.default.createElement("div", {
+        className: "meta"
+      }, _react.default.createElement("p", {
+        className: "name"
+      }, "Harvey Specter"), _react.default.createElement("p", {
+        className: "preview"
+      }, "Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and htmlForty six other things.")))))), _react.default.createElement("div", {
+        id: "bottom-bar"
+      }, _react.default.createElement("button", {
+        id: "addcontact"
+      }, _react.default.createElement("i", {
+        className: "fa fa-user-plus fa-fw",
+        "aria-hidden": "true"
+      }), " ", _react.default.createElement("span", null, "Add contact")), _react.default.createElement("button", {
+        id: "settings"
+      }, _react.default.createElement("i", {
+        className: "fa fa-cog fa-fw",
+        "aria-hidden": "true"
+      }), " ", _react.default.createElement("span", null, "Settings"))));
+    }
+  }]);
+
+  return Sidepanel;
+}(_react.default.Component);
 
 var _default = Sidepanel;
 exports.default = _default;
@@ -25906,7 +25941,7 @@ function () {
       this.socketRef = new WebSocket(path);
 
       this.socketRef.onopen = function () {
-        console.log('websocket open');
+        console.log('WebSocket open');
       };
 
       this.socketNewMessage(JSON.stringify({
@@ -25922,8 +25957,9 @@ function () {
       };
 
       this.socketRef.onclose = function () {
-        console.log('websocket is closed');
-        _this.connect;
+        console.log("WebSocket closed let's reopen");
+
+        _this.connect();
       };
     }
   }, {
@@ -25932,7 +25968,7 @@ function () {
       var parsedData = JSON.parse(data);
       var command = parsedData.command;
 
-      if (Object.keys(this.callbacks), length === 0) {
+      if (Object.keys(this.callbacks).length === 0) {
         return;
       }
 
@@ -25956,7 +25992,7 @@ function () {
     key: "newChatMessage",
     value: function newChatMessage(message) {
       this.sendMessage({
-        command: 'new_messages',
+        command: 'new_message',
         from: message.from,
         message: message.content
       });
@@ -25980,26 +26016,6 @@ function () {
     key: "state",
     value: function state() {
       return this.socketRef.readyState;
-    }
-  }, {
-    key: "waitForSocketConnection",
-    value: function waitForSocketConnection(callback) {
-      var socket = this.socketRef;
-      var recursion = this.waitForSocketConnection;
-      setTimeout(function () {
-        if (socket.readyState === 1) {
-          console.log('connection is secure');
-
-          if (callback != null) {
-            callback();
-          }
-
-          return;
-        } else {
-          console.log('waiting for connection...');
-          recursion(callback);
-        }
-      }, 1);
     }
   }]);
 
@@ -26067,15 +26083,37 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Chat).call(this, props));
 
+    _defineProperty(_assertThisInitialized(_this), "messageChangeHandler", function (event) {
+      _this.setState({
+        message: event.target.value
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "sendMessageHandler", function (e) {
+      e.preventDefault();
+      var messageObject = {
+        from: "herald",
+        content: _this.state.message
+      };
+
+      _websocket.default.newChatMessage(messageObject);
+
+      _this.setState({
+        message: ''
+      });
+    });
+
     _defineProperty(_assertThisInitialized(_this), "renderMessages", function (messages) {
-      var currentUser = 'admin';
-      return messages.map(function (message) {
+      var currentUser = "herald";
+      return messages.map(function (message, i) {
         return _react.default.createElement("li", {
           key: message.id,
           className: message.author === currentUser ? 'sent' : 'replies'
         }, _react.default.createElement("img", {
           src: "http://emilcarlsson.se/assets/mikeross.png"
-        }), _react.default.createElement("p", null, message.content));
+        }), _react.default.createElement("p", null, message.content, _react.default.createElement("br", null), _react.default.createElement("small", {
+          className: message.author === currentUser ? 'sent' : 'replies'
+        }, Math.round((new Date().getTime() - new Date(message.timestamp).getTime()) / 60000), " minutes ago")));
       });
     });
 
@@ -26094,14 +26132,13 @@ function (_React$Component) {
     key: "waitForSocketConnection",
     value: function waitForSocketConnection(callback) {
       var component = this;
-      var recursion = this.waitForSocketConnection;
       setTimeout(function () {
-        if (_websocket.default.state === 1) {
-          console.log('connection is secure');
+        if (_websocket.default.state() === 1) {
+          console.log("Connection is made");
           callback();
           return;
         } else {
-          console.log('waiting for connection...');
+          console.log("wait for connection...");
           component.waitForSocketConnection(callback);
         }
       }, 100);
@@ -26150,9 +26187,14 @@ function (_React$Component) {
         id: "chat-log"
       }, messages && this.renderMessages(messages))), _react.default.createElement("div", {
         className: "message-input"
+      }, _react.default.createElement("form", {
+        onSubmit: this.sendMessageHandler
       }, _react.default.createElement("div", {
         className: "wrap"
       }, _react.default.createElement("input", {
+        onChange: this.messageChangeHandler,
+        value: this.state.message,
+        required: true,
         id: "chat-message-input",
         type: "text",
         placeholder: "Write your message..."
@@ -26165,7 +26207,7 @@ function (_React$Component) {
       }, _react.default.createElement("i", {
         className: "fa fa-paper-plane",
         "aria-hidden": "true"
-      }))))));
+      })))))));
     }
   }]);
 
@@ -26231,7 +26273,7 @@ function (_React$Component) {
   return App;
 }(_react.default.Component);
 
-_reactDom.default.render(_react.default.createElement(App, null), document.getElementById('app'));
+_reactDom.default.render(_react.default.createElement(App, null), document.getElementById("app"));
 },{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./containers/Chat":"src/containers/Chat.js","./websocket":"src/websocket.js"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -26260,7 +26302,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49569" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50177" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -546,6 +546,7 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 100%;
+    padding-bottom: 600px;
   }
   @media screen and (max-width: 735px) {
     #frame .content .messages {
@@ -672,3 +673,7 @@ body {
   .fa {
     font-size: 1.5em !important;
   }
+
+small {
+  font-size: 60% !important;
+}
