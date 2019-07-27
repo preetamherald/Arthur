@@ -1,3 +1,4 @@
 release: python manage.py migrate
-web: daphne justchat.wsgi:channel_layer --port $PORT --bind 0.0.0.0 -v2
+web: gunicorn justchat.wsgi --log-file -
+web: daphne justchat.settings:channel_layer --port $PORT --bind 0.0.0.0 -v2
 worker: python manage.py runworker -v2
