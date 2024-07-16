@@ -44,3 +44,4 @@ urllib3==1.25.2
 whitenoise==3.3.1
 wrapt==1.10.11
 zope.interface==4.6.0
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
